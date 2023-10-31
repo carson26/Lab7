@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <style>
+            #field {
+                border-style: solid;
+                border-width: 5px;
+            }
+        </style>
+        <h1> Practice 2 </h1>
+    </header>
+    <body>
+        <div id="field" value="" style="">Test paragraph.</div>
+        Paragraph R: <input type="text" id="paragraphR" value=""><br>
+        Paragraph G: <input type="text" id="paragraphG" value=""><br>
+        Paragraph B: <input type="text" id="paragraphB" value=""><br>
+        Border R: <input type="text" id="borderR" value=""><br>
+        Border G: <input type="text" id="borderG" value=""><br>
+        Border B: <input type="text" id="borderB" value=""><br>
+        Border Width: <input type= "text" id="borderWidth" value=""><br>
+        <button id="updateButton" onclick="updateField()">Update</button>
+
+        <script>
+            function updateField() {
+                var paragraphR = document.getElementById("paragraphR").value;
+                var paragraphG = document.getElementById("paragraphG").value;
+                var paragraphB = document.getElementById("paragraphB").value;
+                var borderR = document.getElementById("borderR").value;
+                var borderG = document.getElementById("borderG").value;
+                var borderB = document.getElementById("borderB").value;
+                var borderW = document.getElementById("borderWidth").value;
+                var testParagraph = document.getElementById("field");
+
+
+                testParagraph.style.backgroundColor = `rgb(${paragraphR},${paragraphG},${paragraphB})`;
+                testParagraph.style.borderColor = `rgb(${borderR},${borderG},${borderB})`;
+                testParagraph.style.borderWidth = `${borderW}px`;
+                console.log(testParagraph.style);
+            }
+        </script>
+    </body>
+</html>
+
